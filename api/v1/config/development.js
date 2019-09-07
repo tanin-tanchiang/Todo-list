@@ -9,7 +9,7 @@ module.exports ={
   },
   server:{
     ip: '0.0.0.0',
-    port: 5000
+    port: 3000
   },
   swagger:{
     host: 'localhost:5003'

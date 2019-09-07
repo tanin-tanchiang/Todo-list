@@ -16,9 +16,11 @@ module.exports = async(ftf, options) =>{
     },
 
     handler: async(request, reply) => {
-      const todoList = await ftf.model.Todo.findAll()
-      if(todoList){
-        return todoList
+      const todoList = await ftf.model.Todo.find()
+      const todoList2 = await ftf.service.Todo.lists(todoList)
+      // console.log(todoList2);
+      if(todoList2){
+        return todoList2
       }
 
       reply.status(401).send(new Error('Todo not found'))
