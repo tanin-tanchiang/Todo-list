@@ -1,0 +1,21 @@
+FROM alpine:3.9
+
+VOLUME /data/db
+EXPOSE 27017 28017
+
+WORKDIR /api
+
+COPY ./docker/setup-mongo.sh /root
+
+RUN apk update
+RUN apk add --no-cache bash
+RUN apk add --no-cache vim
+RUN apk add --no-cache curl
+RUN apk add --no-cache mongodb
+RUN apk add --no-cache mongodb-tools
+
+RUN echo -e "PS1='\u@\h:\w\$ '\n" > /root/.bashrc
+RUN chmod +x /root/.bashrc
+
+ENTRYPOINT [ "/root/setup-mongo.sh" ]
+CMD [ "mongod", "--bind_ip", "0.0.0.0" ]
