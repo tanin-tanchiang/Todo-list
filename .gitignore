@@ -1,0 +1,5 @@
+.DS_Store
+package_lock.json
+data/*
+!data/.empty
+node_module
