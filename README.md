@@ -1,7 +1,9 @@
 # Todo-list
 1. cd to project folder
 1. run
-```sh docker-compose up ```
+```sh 
+   docker-compose up 
+```
 
 1. If you want to ssh to server's shell to access its file system, open new terminal tab then run
    
