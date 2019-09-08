@@ -29,9 +29,9 @@ module.exports = async(ftf, options) =>{
     },
 
     handler: async(request, reply) => {
-      const count = ftf.service.Todo.remove(request.todoId)
+      const count = ftf.service.Todo.remove(request.params.todoId)
       if(count !== false) {
-        return {done:true}
+        return {done: true}
       }
     }
   })
