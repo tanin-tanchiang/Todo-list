@@ -6,30 +6,31 @@
 ```
 
 1. If you want to ssh to server's shell to access its file system, open new terminal tab then run
-   
-  ```sh
-    docker-compose exec web_api bash
-   ```
+
+```sh
+   docker-compose exec web_api bash
+```
     
 1. Install dependencies
-   ```sh
+```sh
    npm install
-   ```
+```
 1. Make sure you are at path /api/v1 run
-  ```sh
-  npm start 
-  ```
+```sh
+   npm start 
+```
   
 1. If you want to ssh to frontend's shell to access its file system, open new terminal tab then run
    
-  ```sh
-    docker-compose exec frontend bash
-   ```
+```sh
+   docker-compose exec frontend bash
+```
     
 1. Install dependencies
-   ```sh
+```sh
    npm install
-   ```
+```
 1. Make sure you are at path /api/v1 run
-  ```sh
-  npm st
+```sh
+   npm start
+```
