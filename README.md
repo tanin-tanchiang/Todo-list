@@ -30,7 +30,7 @@
 ```sh
    npm install
 ```
-1. Make sure you are at path /api/v1 run
+1. Make sure you are at path /frontend/v1 run
 ```sh
    npm start
 ```
