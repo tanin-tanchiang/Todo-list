@@ -1,14 +1,26 @@
 version: '3'
 services:
-  web:
+  web_api:
     build:
       context: .
-      dockerfile: docker/Dockerfile-web
+      dockerfile: docker/Dockerfile-web_api
     restart: always
     volumes:
       - ./api:/api/
     ports:
-      - "5000:3000"
+      - "3000:3000"
+    environment:
+      MY_ENV_VAR: test
+
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile-frontend
+    restart: always
+    volumes:
+      - ./frontend:/frontend/
+    ports:
+      - "4000:4000"
     environment:
       MY_ENV_VAR: test
 

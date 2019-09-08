@@ -1,0 +1,17 @@
+FROM node:11.10-alpine
+
+WORKDIR /frontend
+
+RUN apk update
+RUN apk add --no-cache bash
+RUN apk add --no-cache vim
+RUN apk add --no-cache curl
+
+#COPY package.json .
+#RUN npm install --quiet
+
+RUN echo -e "PS1='\u@\h:\w\$ '\n" > /root/.bashrc
+RUN chmod +x /root/.bashrc
+
+CMD tail -f /dev/null
+#CMD cd chat && npm run server
